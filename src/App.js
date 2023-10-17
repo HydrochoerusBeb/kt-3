@@ -15,13 +15,15 @@ const scrollToFooter=()=>{
 
   return (
     <div className="App"> 
-      <header className='header' onScrollToFooter={scrollToFooter}>
+      <header className='header' onClick={scrollToFooter}>
         <h1>phone store</h1>
         <button>button</button>
       </header>
       
       <ProdList/>
-      
+      <footer>
+        footer
+      </footer>
     </div>
   );
 }
