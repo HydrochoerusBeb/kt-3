@@ -4,7 +4,7 @@ import React from 'react';
 const Stars = ({ rating }) => {
   const renderStars = () => {
     const stars = [];
-    const activeStars = Math.floor(rating);
+    const activeStars = Math.round(rating);
     const hasHalfStar = rating % 1 !== 0;
 
     for (let i = 1; i <= 5; i++) {
