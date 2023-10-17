@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import ProdList from './Components/ProdList';
 
 function App() {
+
+  
+const scrollToFooter=()=>{
+  window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior:'smooth'
+  })
+}
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="App"> 
+      <header className='header' onScrollToFooter={scrollToFooter}>
+        <h1>phone store</h1>
+        <button>button</button>
       </header>
+      
+      <ProdList/>
+      
     </div>
   );
 }
